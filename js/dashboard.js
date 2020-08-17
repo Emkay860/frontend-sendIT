@@ -9,7 +9,6 @@ class App {
       ) {
         location.replace("signup.html");
       }
-      
 
       this.getUserOrders(this.user_id);
       this.render();
@@ -108,7 +107,7 @@ class App {
 
           // Call reset function to clear signup form
           document.getElementById("order-form").reset();
-          location.reload("/dashboard.html");
+          location.reload("dashboard.html");
           localStorage.setItem("message", "New Parcel Order Created!");
           console.log(data);
         });
@@ -135,7 +134,7 @@ class App {
       <div class="table-body-cell">
       ${
         order_status === 1
-          ? `<a href="/edit_order.html?id=${_id}"> Edit / Cancel Order </a>`
+          ? `<a href="edit_order.html?id=${_id}"> Edit / Cancel Order </a>`
           : this.status[order_status]
       }
       </div>

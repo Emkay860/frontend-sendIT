@@ -3,7 +3,7 @@ class App {
     // Check if session storage contains "user role"
     let user_role = sessionStorage.getItem("role");
     if (typeof user_role === "undefined" || user_role !== "admin") {
-      location.replace("/signup.html");
+      location.replace("signup.html");
     }
 
     try {
@@ -14,7 +14,7 @@ class App {
         token < 10 ||
         this.user_id === "undefined"
       ) {
-        location.replace("/signup.html");
+        location.replace("signup.html");
       }
 
       // Check if url contains unique id of the parcel before rendering
@@ -22,7 +22,7 @@ class App {
         this.render();
       } else {
         // Redirect user back to dashboard
-        location.replace("/dashboard.html");
+        location.replace("dashboard.html");
       }
     } catch (err) {
       console.log(err);
@@ -84,7 +84,7 @@ class App {
           .then((data) => {
             // Call reset function to clear signup form
             document.getElementById("update-order-form").reset();
-            location.assign("/admin_panel.html");
+            location.assign("admin_panel.html");
             console.log(data);
           });
       });

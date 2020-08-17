@@ -16,7 +16,7 @@ class App {
         this.render();
       } else {
         // Redirect user back to dashboard
-        location.replace("/dashboard.html");
+        location.replace("dashboard.html");
       }
     } catch (err) {
       console.log(err);
@@ -79,7 +79,7 @@ class App {
           .then((data) => {
             // Call reset function to clear signup form
             document.getElementById("edit-order-form").reset();
-            location.assign("/dashboard.html");
+            location.assign("dashboard.html");
             console.log(data);
           });
       });
@@ -111,7 +111,7 @@ class App {
         })
           .then((response) => response.json())
           .then((data) => {
-            location.replace("/dashboard.html");
+            location.replace("dashboard.html");
             console.log(data);
           });
       });

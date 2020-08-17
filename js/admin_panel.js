@@ -3,7 +3,7 @@ class App {
     try {
       // Check if session storage contains "user role"
       if (sessionStorage.getItem("role") !== "admin") {
-        location.replace("/signup.html");
+        location.replace("signup.html");
       } else {
         this.getAllOrders();
         this.render();
@@ -86,7 +86,7 @@ class App {
       <div class="table-body-cell">
       ${
         order_status === 1
-          ? `<a href="/update_order.html?id=${_id}"> Update parcel Location </a>`
+          ? `<a href="update_order.html?id=${_id}"> Update parcel Location </a>`
           : ""
       }
       </div>
@@ -143,7 +143,7 @@ class App {
       .then((response) => response.json())
       .then((data) => {
         localStorage.setItem("message", "Parcel status changed to Delivered!");
-        location.reload("/admin_panel.html");
+        location.reload("admin_panel.html");
         console.log(data);
       });
   }

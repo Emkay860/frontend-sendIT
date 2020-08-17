@@ -1,6 +1,3 @@
-let key = localStorage.getItem("key");
-console.log(key);
-
 // Check if user is signedIn and token key is set
 // window.addEventListener("load", function (event) {
 //   if (typeof key === "undefined" || key === null || key < 10) {
