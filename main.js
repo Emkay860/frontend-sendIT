@@ -96,7 +96,7 @@ class App {
             sessionStorage.setItem("role", data.role);
             location.replace("admin_panel.html");
           } else {
-            location.replace("frontend-sendIT/dashboard.html");
+            location.replace("dashboard.html");
           }
           console.log(data);
         });
