@@ -3,7 +3,7 @@ class App {
     try {
       // Check if session storage contains "user role"
       if (sessionStorage.getItem("role") !== "admin") {
-        location.replace("signup.html");
+        location.replace("/signup.html");
       } else {
         this.getAllOrders();
         this.render();
