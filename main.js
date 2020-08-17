@@ -94,7 +94,7 @@ class App {
           document.getElementById("login-form").reset();
           if (data.role === "admin") {
             sessionStorage.setItem("role", data.role);
-            location.replace("frontend-sendIT/admin_panel.html");
+            location.replace("admin_panel.html");
           } else {
             location.replace("frontend-sendIT/dashboard.html");
           }
