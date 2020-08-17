@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Logistics | Dashboard</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link href="css/dashboard.css" rel="stylesheet" type="text/css">
+    <link href="css/table.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/alert.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css">
+</head>
+
+<body>
+    <nav>
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="#" onclick="localStorage.clear(); location.replace('/index.html');" class="navlink">SignOut</a>
+            <a href="dashboard.html" class="active navlink">Dashboard</a>
+            <a href="" class="icon" onclick="toggleNavbar(event)"> <i class="fa fa-bars"></i> </a>
+        </div>
+    </nav>
+
+    <div id="alert-div"></div>
+    <section class="container create-order-section mt-5 py-0">
+        <div class="create-order-div">
+            <button onclick="toggleCreateOrderModal()" id="create-order" class="btn btn-create-order">Add/New
+                Order</button>
+        </div>
+    </section>
+    <article class="container mt-3">
+        <div class="wrap-table">
+            <div class="table">
+                <div class="table-header">
+                    <div class="table-header-cell">
+                        Tag/ParcelId
+                    </div>
+                    <div class="table-header-cell">
+                        Pickup Location
+                    </div>
+                    <div class="table-header-cell">
+                        Destination
+                    </div>
+                    <div class="table-header-cell">
+                        Price
+                    </div>
+                    <div class="table-header-cell">
+                    </div>
+                </div>
+                <div class="table-body" id="table-body">
+                    <div class="table-row">
+                        <div class="table-body-cell">
+
+                        </div>
+                        <div class="table-body-cell">
+
+                            <img class="img-center" src="img/running-deer.gif" />
+                        </div>
+                        <div class="table-body-cell">
+
+                        </div>
+                        <div class="table-body-cell">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="table-footer"></div>
+            </div>
+        </div>
+    </article>
+    <!-- The Modal -->
+    <div id="create-order-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Add/New Order</h2>
+            </div>
+            <div class="modal-body">
+                <div class="" id="">
+                    <div class="order-div" id="order-div">
+                        <form name="order-form" id="order-form">
+                            <div class="form-group">
+                                <label for="pickup-location" class="input-label">Pickup location</label>
+                                <input name="pickup_location" id="pickup_location" type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="destination" class="input-label">Destination</label>
+                                <input name="destination" id="destination" type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="price" class="input-label">Price</label>
+                                <input name="price" type="text" id="price" disabled>
+                            </div>
+                            <div class="btn-div">
+                                <button type="submit" name="btn-create-order" class=" btn btn-create-order">Create
+                                    Order</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/dashboard.js"></script>
+    <!-- <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl5EMyVVvrLjI6P3nfuSgaLslhJiyGgRc&callback=">
+        </script> -->
+</body>
+
+</html>

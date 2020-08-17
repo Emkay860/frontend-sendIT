@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Logistics | Edit Order</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css">
+</head>
+
+<body>
+    <nav>
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="#" onclick="localStorage.clear(); location.replace('/index.html');" class="navlink">SignOut</a>
+            <a href="admin_panel.html" class="active navlink">Admin Dashboard</a>
+            <a href="" class="icon" onclick="toggleNavbar(event)"> <i class="fa fa-bars"></i> </a>
+        </div>
+    </nav>
+    <article class="form-container">
+        <div id="edit-order-div" class="form-div">
+            <form name="update-order-form" id="update-order-form">
+                <!-- <div class="form-group">
+                    <label for="orderid" class="input-label">Order Id</label>
+                    <input name="orderid" type="text" id="orderid" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="pickup-location" class="input-label">Pickup location</label>
+                    <input name="pickup-location" id="pickup-location" type="text" disabled>
+                </div> -->
+                <div class="form-group">
+                    <label for="present-location" class="input-label">Present Location</label>
+                    <input name="present-location" type="text" id="present-location" required>
+                </div>
+                <div class="btn-div" id="edit-order-btn">
+                    <button type="submit" name="btn-update-order" id="btn-update-order"
+                        class="btn btn-cancel-order">Update
+                    </button>
+                    <button name="btn-cancel-order" id="btn-cancel-order" class="btn btn-cancel-order">Back</button>
+                </div>
+            </form>
+        </div>
+    </article>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/update_order.js"></script>
+</body>
+
+</html>
