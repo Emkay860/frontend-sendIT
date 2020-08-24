@@ -38,8 +38,6 @@ class App {
       })
         .then((response) => response.json())
         .then((data) => {
-          // Call reset function to clear signup form
-          document.getElementById("signup-form").reset();
           // Display alert on signup
           let el = document.getElementById("alert-div");
           // Remove all element in <div id="alert-div"/>
@@ -49,6 +47,13 @@ class App {
           // Append new alert to the div and set alert type
           el.appendChild(this.displayAlert(data, "alert-success"));
 
+          // Set email and password field for login page
+          document.getElementById("login-email").value = email;
+          document.getElementById("login-password").value = password;
+
+          document.getElementById("btn-login").click();
+          // Call reset function to clear signup form
+          document.getElementById("signup-form").reset();
           console.log(data);
         });
     });
