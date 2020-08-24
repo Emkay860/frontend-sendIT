@@ -93,10 +93,21 @@ class App {
           // Call reset function to reset login form
           document.getElementById("login-form").reset();
           if (data.role === "admin") {
+            // Set session and re direct admin to seperate dashboard
             sessionStorage.setItem("role", data.role);
             location.replace("admin_panel.html");
+          } else if (data.role === "user") {
+            // Reirect user to dashboard
+            location.replace("dashboard.html");
           } else {
-            // location.replace("dashboard.html");
+            // Display alert on login
+            let el = document.getElementById("alert-div");
+            // Remove all element in <div id="alert-div"/>
+            while (el.firstChild) {
+              el.removeChild(el.firstChild); // empty the <div id="alert-div" />
+            }
+            // Append new alert to the div and set alert type
+            el.appendChild(this.displayAlert(data, "alert-danger"));
           }
           console.log(data);
         });
