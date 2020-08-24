@@ -96,7 +96,7 @@ class App {
             sessionStorage.setItem("role", data.role);
             location.replace("admin_panel.html");
           } else {
-            location.replace("dashboard.html");
+            // location.replace("dashboard.html");
           }
           console.log(data);
         });
@@ -110,12 +110,7 @@ class App {
     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
     <strong>${message}</strong> 
       `;
-    // // when the 'x' delete link is clicked
-    // el.querySelector('a').addEventListener('click', (event) => {
-    //   event.preventDefault()
-    //   this.deleteMeal(id)
-    //   el.remove()
-    // })
+
     return el;
   }
 }
