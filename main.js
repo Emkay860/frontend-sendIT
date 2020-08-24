@@ -58,10 +58,7 @@ class App {
     document.getElementById("login-form").addEventListener("submit", (e) => {
       e.preventDefault();
 
-      // Get modify button from DOM
-      const btn = document.getElementById("btn-login");
-      // Set btn innerHTML to loading image on click
-      btn.innerHTML = `<img src="img/loading.gif"/>`;
+      displayLoading("btn-login", `<img src="img/loading.gif"/>`);
 
       const email = document.getElementById("login-email").value;
       const password = document.getElementById("login-password").value;
@@ -93,7 +90,7 @@ class App {
           // Call reset function to reset login form
           document.getElementById("login-form").reset();
           if (data.role === "admin") {
-            // Set session and re direct admin to seperate dashboard
+            // Set session and redirect admin to seperate dashboard
             sessionStorage.setItem("role", data.role);
             location.replace("admin_panel.html");
           } else if (data.role === "user") {
@@ -108,6 +105,8 @@ class App {
             }
             // Append new alert to the div and set alert type
             el.appendChild(this.displayAlert(data, "alert-danger"));
+
+            displayLoading("btn-login", "Login");
           }
           console.log(data);
         });
@@ -124,6 +123,13 @@ class App {
 
     return el;
   }
+}
+
+displayLoading(btnId, text){
+  // Get modify Login button from DOM
+  const btn = document.getElementById(btnId);
+  // Set btn innerHTML to loading image on click
+  btn.innerHTML = text;
 }
 
 let app = new App();
