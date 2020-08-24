@@ -13,6 +13,7 @@ class App {
       const firstname = document.getElementById("firstname").value;
       const lastname = document.getElementById("lastname").value;
       const email = document.getElementById("email").value;
+      const phone_number = document.getElementById("phone-number").value;
       const password = document.getElementById("password").value;
       const url =
         "https://sheltered-atoll-75425.herokuapp.com/api/v1/auth/signup";
@@ -24,6 +25,7 @@ class App {
         firstname: firstname,
         lastname: lastname,
         email: email,
+        phone_number: phone_number,
         password: password,
       };
 
