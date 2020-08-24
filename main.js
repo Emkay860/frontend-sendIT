@@ -58,7 +58,7 @@ class App {
     document.getElementById("login-form").addEventListener("submit", (e) => {
       e.preventDefault();
 
-      displayLoading("btn-login", `<img src="img/loading.gif"/>`);
+      this.displayLoading("btn-login", `<img src="img/loading.gif"/>`);
 
       const email = document.getElementById("login-email").value;
       const password = document.getElementById("login-password").value;
@@ -106,7 +106,7 @@ class App {
             // Append new alert to the div and set alert type
             el.appendChild(this.displayAlert(data, "alert-danger"));
 
-            displayLoading("btn-login", "Login");
+            this.displayLoading("btn-login", "Login");
           }
           console.log(data);
         });
@@ -123,13 +123,13 @@ class App {
 
     return el;
   }
-}
 
-displayLoading(btnId, text){
-  // Get modify Login button from DOM
-  const btn = document.getElementById(btnId);
-  // Set btn innerHTML to loading image on click
-  btn.innerHTML = text;
+  displayLoading(btnId, value) {
+    // Get modify Login button from DOM
+    const btn = document.getElementById(btnId);
+    // Set btn innerHTML to loading image on click
+    btn.innerHTML = value;
+  }
 }
 
 let app = new App();
