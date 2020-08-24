@@ -51,7 +51,9 @@ class App {
           document.getElementById("login-email").value = email;
           document.getElementById("login-password").value = password;
 
+          // Simulate button click to activate login form event listener
           document.getElementById("btn-login").click();
+
           // Call reset function to clear signup form
           document.getElementById("signup-form").reset();
           console.log(data);
