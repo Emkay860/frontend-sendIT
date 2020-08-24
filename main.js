@@ -54,6 +54,9 @@ class App {
           // Simulate button click to activate login form event listener
           document.getElementById("btn-login").click();
 
+          // Display loading image
+          this.displayLoading("btn-signup", `<img src="img/loading.gif"/>`);
+
           // Call reset function to clear signup form
           document.getElementById("signup-form").reset();
           console.log(data);
