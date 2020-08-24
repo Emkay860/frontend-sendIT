@@ -53,6 +53,12 @@ body {
   width: 60%;
 }
 
+#err-text {
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+}
+
 /* Form specific styles */
 
 #signup-div {
