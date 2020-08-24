@@ -76,12 +76,17 @@ body {
 
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="tel"] {
   width: 70%;
-  padding: 12px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  font-size: 16px;
+  color: rgb(63, 60, 60);
+  font-family: "Montserrat", sans-serif;
+  font-style: oblique;
 }
 
 .input-label {
@@ -171,7 +176,8 @@ input[type="password"] {
 
   input[type="text"],
   input[type="email"],
-  input[type="password"] {
+  input[type="password"],
+  input[type="tel"] {
     width: 100%;
   }
 
