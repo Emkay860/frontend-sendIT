@@ -6,7 +6,7 @@
 .closebtn {
   margin-left: 15px;
   color: white;
-  font-weight: bold;
+  font-weight: italic;
   float: right;
   font-size: 22px;
   line-height: 20px;
@@ -23,5 +23,7 @@
 }
 
 .alert-danger {
-  background-color: #f44336;
+  background-color: #f443369a;
+  border-color: #f44336;
+  color: black;
 }
