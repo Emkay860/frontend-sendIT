@@ -52,7 +52,8 @@ class App {
           let fragment = document.createDocumentFragment();
           // Iterate through the data list and append each order to the fragment
           for (let i = 0; i < data.length; i++) {
-            fragment.appendChild(this.displayOrders(data[i]));
+            let count = i + 1;
+            fragment.appendChild(this.displayOrders(data[i], count));
           }
 
           let el = document.getElementById("table-body");
@@ -66,12 +67,15 @@ class App {
       });
   }
 
-  displayOrders({ price, pickup_location, destination, _id, order_status }) {
+  displayOrders(
+    { price, pickup_location, destination, _id, order_status },
+    count
+  ) {
     let el = document.createElement("div");
     el.className = "table-row";
     el.innerHTML = `
       <div class="table-body-cell">
-         ${_id}
+         ${count}
       </div>
       <div class="table-body-cell">
         ${pickup_location}
