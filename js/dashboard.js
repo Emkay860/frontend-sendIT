@@ -78,6 +78,9 @@ class App {
       e.preventDefault();
       const pickup_location = document.getElementById("pickup_location").value;
       const destination = document.getElementById("destination").value;
+      const recipient_name = document.getElementById("recipient-name").value;
+      const recipient_phone = document.getElementById("recipient-phone").value;
+      const description = document.getElementById("description").value;
       // Try to get price by distence from d two point from google maps
       const price = 45;
       const url = "https://sheltered-atoll-75425.herokuapp.com/api/v1/parcels";
@@ -88,6 +91,9 @@ class App {
       let data = {
         pickupLocation: pickup_location,
         destination: destination,
+        recipient_name: recipient_name,
+        recipient_phone: recipient_phone,
+        description: description,
         price: price,
         userId: user_id,
       };
