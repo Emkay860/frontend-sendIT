@@ -68,7 +68,16 @@ class App {
   }
 
   displayOrders(
-    { price, pickup_location, destination, _id, order_status },
+    {
+      price,
+      pickup_location,
+      recipient_name,
+      recipient_phone,
+      destination,
+      _id,
+      description,
+      order_status,
+    },
     count
   ) {
     let el = document.createElement("div");
@@ -81,7 +90,16 @@ class App {
         ${pickup_location}
       </div>
       <div class="table-body-cell">
+        ${recipient_name}
+      </div>
+      <div class="table-body-cell">
+        ${recipient_phone}
+      </div>
+      <div class="table-body-cell">
         ${destination}
+      </div>
+      <div class="table-body-cell">
+        ${description}
       </div>
       <div class="table-body-cell">
         &#8358; ${price}

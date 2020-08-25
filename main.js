@@ -10,6 +10,10 @@ class App {
   signup() {
     document.getElementById("signup-form").addEventListener("submit", (e) => {
       e.preventDefault();
+
+      // Display loading image
+      this.displayLoading("btn-signup", `<img src="img/loading.gif"/>`);
+
       const firstname = document.getElementById("firstname").value;
       const lastname = document.getElementById("lastname").value;
       const email = document.getElementById("email").value;
@@ -55,9 +59,6 @@ class App {
 
           // Simulate button click to activate login form event listener
           document.getElementById("btn-login").click();
-
-          // Display loading image
-          this.displayLoading("btn-signup", `<img src="img/loading.gif"/>`);
 
           // Call reset function to clear signup form
           document.getElementById("signup-form").reset();
