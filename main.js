@@ -50,15 +50,20 @@ class App {
           while (el.firstChild) {
             el.removeChild(el.firstChild); // empty the <div id="alert-div" />
           }
-          // Append new alert to the div and set alert type
-          el.appendChild(this.displayAlert(data, "alert-success"));
+          if (data.hasOwnProperty("error")) {
+            // Append new alert to the div and set alert type
+            el.appendChild(this.displayAlert(data.error, "alert-danger"));
+          } else {
+            // Append new alert to the div and set alert type
+            el.appendChild(this.displayAlert(data, "alert-success"));
 
-          // Set email and password field for login page
-          document.getElementById("login-email").value = email;
-          document.getElementById("login-password").value = password;
+            // Set email and password field for login page
+            document.getElementById("login-email").value = email;
+            document.getElementById("login-password").value = password;
 
-          // Simulate button click to activate login form event listener
-          document.getElementById("btn-login").click();
+            // Simulate button click to activate login form event listener
+            document.getElementById("btn-login").click();
+          }
 
           // Call reset function to clear signup form
           document.getElementById("signup-form").reset();
